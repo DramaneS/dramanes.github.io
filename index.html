@@ -401,13 +401,13 @@
 
         <form action="">
 
-            <input type="text" placeholder="name" class="box">
-            <input type="email" placeholder="email" class="box">
-            <input type="number" placeholder="number" class="box">
+            <input type="text" placeholder="Nom et prenom" class="box" id="nom">
+            <input type="email" placeholder="email" class="box" id="mail">
+            <input type="number" placeholder="numero de telephone" class="box" id="tel">
 
-            <textarea name="" placeholder="message" id="" cols="30" rows="10"></textarea>
+            <textarea name="" placeholder="message" id="msg" cols="30" rows="10" ></textarea>
 
-            <input type="submit" class="btn" value="send message">
+            <input type="submit" class="btn" id="btn" value="Envoi message">
 
         </form>
 
@@ -425,6 +425,8 @@
 
 
 <!-- custom js file link  -->
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<!-- <script src="js/message.js"></script> -->
 <script src="js/script.js"></script>
 
 </body>

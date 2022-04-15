@@ -34,3 +34,36 @@ document.querySelectorAll('a').forEach(links =>{
     }
 
 });
+
+function removeItems() {
+    document.getElementById('nom').value = '';
+    document.getElementById('mail').value = '';
+    document.getElementById('tel').value = '';
+    document.getElementById('msg').value = '';
+}
+
+var btn = document.getElementById('btn');
+btn.addEventListener('click', function (e) {
+    e.preventDefault()
+    var nom = document.getElementById('nom').value;
+    var email = document.getElementById('mail').value;
+    var objet = document.getElementById('tel').value;
+    var message = document.getElementById('msg').value;
+    var body = '' + nom + '<br>' + email + '<br>' +
+        objet + '<br>' + message;
+
+
+    Email.send({
+        Host: "smtp.gmail.com",
+        Username: "diarrad536@gmail.com",
+        Password: "qonjeandgryynada",
+        To: 'diarrad536@gmail.com',
+        From: email,
+        Subject: objet,
+        Body: body,
+    }).then(
+        message => alert("Message envoyer")
+    );
+    
+    removeItems();
+})
